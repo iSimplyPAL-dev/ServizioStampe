@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PrintBarcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nTypeCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDaCodificare" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPathFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNameFile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBookmark" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrintBarcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrintBarcodeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PrintBarcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:PrintBarcode" />
+  </wsdl:message>
+  <wsdl:message name="PrintBarcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:PrintBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceStampaBarcodeSoap">
+    <wsdl:operation name="PrintBarcode">
+      <wsdl:input message="tns:PrintBarcodeSoapIn" />
+      <wsdl:output message="tns:PrintBarcodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceStampaBarcodeSoap" type="tns:ServiceStampaBarcodeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PrintBarcode">
+      <soap:operation soapAction="http://tempuri.org/PrintBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceStampaBarcodeSoap12" type="tns:ServiceStampaBarcodeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="PrintBarcode">
+      <soap12:operation soapAction="http://tempuri.org/PrintBarcode" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceStampaBarcode">
+    <wsdl:port name="ServiceStampaBarcodeSoap" binding="tns:ServiceStampaBarcodeSoap">
+      <soap:address location="https://www.ran.it/wsstampabarcode/servicestampabarcode.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceStampaBarcodeSoap12" binding="tns:ServiceStampaBarcodeSoap12">
+      <soap12:address location="https://www.ran.it/wsstampabarcode/servicestampabarcode.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

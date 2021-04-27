@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RIBESElaborazioneDocumentiInterface", "RIBESElaborazioneDocumentiInterface\RIBESElaborazioneDocumentiInterface.vbproj", "{FF11712A-9135-45EF-9D3B-A95D35F7DE76}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ServizioRibesElaborazioneDocumentiExe", "ServizioRibesElaborazioneDocumentiExe\ServizioRibesElaborazioneDocumentiExe.vbproj", "{BECF15FB-A158-4EAC-BC6A-56EBD42D3869}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{069A19AF-C221-49A9-A716-B4AFD7B169B8}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF11712A-9135-45EF-9D3B-A95D35F7DE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF11712A-9135-45EF-9D3B-A95D35F7DE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF11712A-9135-45EF-9D3B-A95D35F7DE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF11712A-9135-45EF-9D3B-A95D35F7DE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BECF15FB-A158-4EAC-BC6A-56EBD42D3869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECF15FB-A158-4EAC-BC6A-56EBD42D3869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECF15FB-A158-4EAC-BC6A-56EBD42D3869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECF15FB-A158-4EAC-BC6A-56EBD42D3869}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FDEACBC-25F8-4376-B3C5-8ADCE1F989C2}
+	EndGlobalSection
+EndGlobal
